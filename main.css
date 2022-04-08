@@ -1,0 +1,149 @@
+* {
+  outline: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+*:focus {
+  outline: none;
+}
+html {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+@keyframes appear {
+  from {
+    transform: translateY(20%);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: #0d1117;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #0d1117;
+  z-index: 1000;
+}
+input[type="text"] {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  width: 100%;
+}
+input[type="text"]:hover {
+  background-color: #1b2026;
+}
+input[type="text"]:focus {
+  background-color: #30363d;
+}
+::placeholder {
+  font-size: 12pt;
+}
+button {
+  padding: 15px;
+  background-color: #3742fa;
+  color: #fff;
+  cursor: pointer;
+  border-width: 3px;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 5px;
+}
+button:active {
+  border-color: #5760ff;
+}
+.todoButton {
+  background: none;
+  font-size: 15pt;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.box {
+  display: grid;
+  gap: 5px;
+  width: 1000px;
+}
+#delete {
+  color: red;
+}
+#complete {
+  color: green;
+}
+.container {
+  display: grid;
+  gap: 5px;
+}
+.addTodo {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  width: auto;
+  padding: 5px;
+  border: 1px solid #ccc;
+  align-items: center;
+  animation: 0.2s ease-out appear;
+}
+
+#completedTodo .todoTitle {
+  text-decoration: line-through;
+}
+#completedTodo #complete {
+  background-color: green;
+  color: #fff;
+}
+#completedTodo .todo {
+  background-color: #30363d;
+}
+#complete:active {
+  background-color: green;
+  color: #fff;
+}
+#delete:active {
+  background-color: red;
+  color: #fff;
+}
+
+@media (hover: hover) {
+  #complete:hover {
+    background-color: green;
+    color: #fff;
+  }
+  #delete:hover {
+    background-color: red;
+    color: #fff;
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+}

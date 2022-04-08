@@ -1,0 +1,22 @@
+{
+    "name": "Todo",
+    "short_name": "todo",
+    "description": "Make, do, finish, delete",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "app32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "app512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#0d1117",
+    "background_color": "#0d1117"
+}
